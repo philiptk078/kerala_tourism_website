@@ -67,8 +67,8 @@ h4.dist-heading {
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: lighter;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 80px;
+    margin-right: 700px;
 }
 .hker {
     margin: 20px;
@@ -89,15 +89,20 @@ img.dist-img {
     width: 438px;
     height: 300px;
 }
-/* .padding {
-    padding: 32px 0;
-} */
+.sidebar .nav-link,
+.sidebar .navbar-brand {
+    color: #687384;
+} 
+.sidebar .nav-link:hover,
+.sidebar .navbar-brand:hover {
+    color: #fff;
+}
 
 img.imggrid {
     max-width: 100%;
 }
 .no-padding .col-md-3 {
-    padding: 1px;
+    padding: 10px;
 }
 .inner{
     overflow: hidden;
@@ -149,19 +154,83 @@ hr.light{
     margin-top: 12px;
     margin-bottom: 16px;
 }
-/* login-signup */
-.colorgraph {
-    height: 5px;
-    border-top: 0;
-    background: #c4e17f;
-    border-radius: 5px;
-    background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-    background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-    background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-    background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+/* particle movement */
+#particles-js{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(/images/kerala_index1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 98%;
+}
+#particles-js-login{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/images/kerala_bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+#particles-js-logout{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/images/kerala_bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+/* signin page */
+#signin h1{
+    margin-bottom: 40px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.form-group label{
+    font-size: 20px;
+    color: whitesmoke;
+}
+.forgot,.form-check{
+    display: inline-block;
+}
+.form-check{
+    margin-left: 30px;
+}
+.forgot a{
+    color: rgb(221, 47, 47);
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-left: 240px;
+}
+.newacc {
+    margin: 15px 270px 0px 0px;
+    color: #000000;
+    font-size: 18px;
   }
 
-  
+.newacc a{
+    color: rgb(33, 11, 228);
+    text-decoration: none;
+    font-weight: bold;
+}
 
-
-
+/* signup page */
+#signup h1{
+    margin-bottom: 38px;
+    color: whitesmoke;
+    text-align: center;
+}
+.memb{
+    margin: 10px 0 0;
+    color: white;
+    font-size: 18px;
+}
+.memb a{
+    color: rgb(89, 0, 255);
+    font-weight: bold;
+    text-decoration: none;
+}
+.form-group label{
+    font-size: 18px;
+    color: whitesmoke;
+}
+.form-group small
+{  
+    visibility: hidden;
+}

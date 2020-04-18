@@ -6,14 +6,6 @@
     <title>SignUp</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
-    <style>
-        body {
-            background-image: url('/images/kerala_bg.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;
-        }
-    </style>
 </head>
 
 <body data-spy="scroll" data-target="#menu">
@@ -43,43 +35,82 @@
     </div>
 </nav>
 </div>
+<div id="particles-js-logout">
+</div>
 <!-- Registration -->
 <div class="container-fluid padding">
-    <div class="row text-center padding" style="margin-top: 8%;">
+    <div class="row text-center padding" style="margin-top: -44%;">
             <div class="col-4">
             </div>
                 <div class="col-4" style="border-style: groove; padding-top: 30px; padding-bottom: 50px;">
-                    <form role="form" action="#">
-                        <fieldset>
-                            <h2 style="font-weight: bolder; color: rgb(0, 0, 0); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Create Account</h2>
-                            <hr class="colorgraph">
-                            <div class="form-group">
-                                <input type="text" name="Name" id="name" class="form-control input-lg" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="Place" id="place" class="form-control input-lg" placeholder="Place">
-                            </div>
-                            <div class="form-group">
-                                <input type="number" name="Mobile" id="mobile" class="form-control input-lg" placeholder="Contact Number">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
-                                <!-- <label id="lblemail"  style="color:red; visibility: hidden">invalid</label> -->
-                            </div>
-                            <hr class="colorgraph">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input type="submit" class="btn btn-lg btn-success btn-block" value="Register Now" >
+                    <form id="signup" action="login.html" onsubmit="return validate()">
+                        <h1>Create an Account</h1>
+                           <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="first_name" style="margin-right: 64%;">First Name</label>
+                                        <input type="text" class="form-control" id="first_name" placeholder="First Name"> 
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="last_name" style="margin-right: 64%;">Last Name</label>
+                                        <input type="text" class="form-control" id="last_name" placeholder="Last Name"> 
+                                    </div>
+                                </div>
+                          </div>
+                          <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="user_name" style="margin-right: 64%;">Username</label>
+                                        <input type="text" class="form-control" id="user_name" placeholder="Username" > 
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email_addr" style="margin-right: 56%;">Email Address</label>
+                                        <input type="text" class="form-control" id="email_addr" placeholder="Email">
+                                    </div>
+                                </div>
+                          </div>
+                          <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone_number" style="margin-right: 52%;">Phone Number </label>
+                                        <input type="text" class="form-control" id="phone_number" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="place" style="margin-right: 82%;">Place </label>
+                                        <input type="text" class="form-control" id="place" placeholder="Your Birth Place">
+                                    </div>
+                                </div>
+                          </div>
+                          <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="password_first" style="margin-right: 69%;">Password </label>
+                                        <input type="password" class="form-control" id="password_first" placeholder="Password"><br>
+                                    <!-- <div class="progress" id="prog">
+                                    <div class="progress-bar" id="strength" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div id="strength1"></div> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label for="password_confirm" style="margin-right: 44%;">Confirm Password </label>
+                                    <input type="password" class="form-control" id="password_confirm" placeholder="Confirm password">
+                                    </div>
                                 </div>
                             </div>
-                        </fieldset>
-                    </form>
+                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                            <p class="memb">Already a member? <a href="./signin.html">SignIn here</a></p>
+                          </form>
                     <div class="row">
                     <div class="col-md-12" style="padding-top: 15px;">
-                        <a href="./home.html" class="btn btn-lg btn-danger btn-block">Continue as guest</a>
+                        <a href="./home.html" class="btn btn-danger btn-block">Continue as guest</a>
                     </div>
                 </div>
                 </div>
@@ -87,7 +118,7 @@
             </div>
       </div>  
 </div>
-<div style="margin-bottom: 3%;"></div>
+<div style="margin-bottom: 4%;"></div>
 <!-- Footer Section -->
 <div id="footer">
     <div class="col-12" style="padding-top: 20px;">
@@ -96,8 +127,12 @@
         <h6>All rights reserved © philip_kerala_tourism.com 2020.</h6>
     </div>
 </div>  
-</body>
 
+<!-- Particles-movement -->
+<script src="/js/particles_logout.js"></script>
+<script src="/js/app_logout.js"></script>
+
+<script src="/js/signup.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </body>

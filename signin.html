@@ -6,14 +6,6 @@
     <title>SignIn</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
-    <style>
-        body {
-            background-image: url('/images/kerala_bg.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;
-        }
-    </style>
 </head>
 
 <body data-spy="scroll" data-target="#menu">
@@ -44,34 +36,36 @@
     </div>
 </nav>
 </div>
+<div id="particles-js-login"></div>
 <!-- login from -->
 <div class="container-fluid padding">
-    <div class="row text-center padding" style="margin-top: 12%;">
+    <div class="row text-center padding" style="margin-top: -40%;">
             <div class="col-4">
             </div>
                 <div class="col-4" style="border-style: groove; padding-top: 30px; padding-bottom: 50px;">
-                    <form role="form" action="#">
-                        <fieldset>
-                            <h2 style="font-weight: bolder; color: rgb(12, 12, 12); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
-                            Please Sign In</h2>
-                            <hr class="colorgraph">
-                            <div class="form-group">
-                                <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
-                            </div>
-                            <hr class="colorgraph">
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In" >
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <a href="./signup.html" class="btn btn-lg btn-primary btn-block">Register</a>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
+                    <form id="signin" action="./home.html" onsubmit="return validate()">
+                        <h1> Please SignIn</h1>
+                        <div class="form-group">
+                         <label for="email_addr" style="margin-right: 84%;">Username</label>
+                         <input type="text" class="form-control" id="email_addr" placeholder="Email address">
+                       </div>
+                        <div class="form-group">
+                         <label for="password_first" style="margin-right: 85%;">Password</label>
+                         <input type="password" class="form-control" id="password_first" placeholder="Password">
+                        </div>
+                        <div class="row">
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="chkbox">
+                                <label class="form-check-label" for="chkbox">Remember me</label>
+                              </div>
+                              <div class="forgot float-right">
+                                <a href="./index.html">Forgot password?</a>
+                              </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">SignIn</button>
+                        <p class="newacc">Not registered? <a href="./signup.html">Create an account</a></p>
+                
+                      </form>
                 </div>
             <div class="col-4">     
         </div>
@@ -86,8 +80,12 @@
         <h6>All rights reserved © philip_kerala_tourism.com 2020.</h6>
     </div>
 </div>  
-</body>
 
+<!-- Particles-movement -->
+<script src="/js/particles_login.js"></script>
+<script src="/js/app_login.js"></script>
+
+<script src="/js/signin.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </body>
