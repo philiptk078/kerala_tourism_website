@@ -43,18 +43,18 @@
             <div class="col-4">
             </div>
                 <div class="col-4" style="border-style: groove; padding-top: 30px; padding-bottom: 50px;">
-                    <form id="signup" action="login.html" onsubmit="return validate()">
+                    <form id="signup" action="./signin.html" onsubmit="return validate()">
                         <h1>Create an Account</h1>
                            <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="first_name" style="margin-right: 64%;">First Name</label>
+                                        <label for="first_name" style="margin-right: 66%;">First Name</label>
                                         <input type="text" class="form-control" id="first_name" placeholder="First Name"> 
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="last_name" style="margin-right: 64%;">Last Name</label>
+                                        <label for="last_name" style="margin-right: 66%;">Last Name</label>
                                         <input type="text" class="form-control" id="last_name" placeholder="Last Name"> 
                                     </div>
                                 </div>
@@ -62,13 +62,17 @@
                           <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="user_name" style="margin-right: 64%;">Username</label>
+                                        <label for="user_name" style="margin-right: 66%;">Username</label>
                                         <input type="text" class="form-control" id="user_name" placeholder="Username" > 
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="email_addr" style="margin-right: 56%;">Email Address</label>
+                                        <label for="email_addr" style="margin-right: 47%;">Email Address
+                                            <a href="#" data-toggle="tooltip" title="For Example: 'samplename@gmail.com'">
+                                                <img src="./images/tooltip_img.png">
+                                            </a>
+                                        </label>
                                         <input type="text" class="form-control" id="email_addr" placeholder="Email">
                                     </div>
                                 </div>
@@ -76,13 +80,17 @@
                           <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="phone_number" style="margin-right: 52%;">Phone Number </label>
+                                        <label for="phone_number" style="margin-right: 44%;">Phone Number 
+                                            <a href="#" data-toggle="tooltip" title="Should contain 10 numbers only!">
+                                                <img src="./images/tooltip_img.png">
+                                            </a>
+                                        </label>
                                         <input type="text" class="form-control" id="phone_number" placeholder="Phone Number">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="place" style="margin-right: 82%;">Place </label>
+                                        <label for="place" style="margin-right: 81%;">Place </label>
                                         <input type="text" class="form-control" id="place" placeholder="Your Birth Place">
                                     </div>
                                 </div>
@@ -90,7 +98,11 @@
                           <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="password_first" style="margin-right: 69%;">Password </label>
+                                        <label for="password_first" style="margin-right: 60%;">Password 
+                                            <a href="#" data-toggle="tooltip" title="Minimum eight characters, at least one uppercase letter, one lowercase letter and one number!">
+                                                <img src="./images/tooltip_img.png">
+                                            </a>
+                                        </label>
                                         <input type="password" class="form-control" id="password_first" placeholder="Password"><br>
                                     <div class="progress" id="prog">
                                     <div class="progress-bar" id="strength" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>

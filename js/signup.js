@@ -1,16 +1,16 @@
 function validate()
 {
-    let fname= document.getElementById('first_name');
-    let lname= document.getElementById('last_name');
-    let uname= document.getElementById('user_name');
-    let email= document.getElementById('email_addr').value;
-    let phno= document.getElementById('phone_number');
-    let nplace= document.getElementById('place');
-    let pwdf= document.getElementById('password_first');
-    let pwdc= document.getElementById('password_confirm');
-    let regexp=/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+)\.([a-z]{2,3})(.[a-z]{2,3})?$/;
-    var phregexp = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-    var passregexp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    let fname = document.getElementById('first_name');
+    let lname = document.getElementById('last_name');
+    let uname = document.getElementById('user_name');
+    let email = document.getElementById('email_addr').value;
+    let phno = document.getElementById('phone_number');
+    let nplace = document.getElementById('place');
+    let pwdf = document.getElementById('password_first');
+    let pwdc = document.getElementById('password_confirm');
+    let email_regexp = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+)\.([a-z]{2,3})(.[a-z]{2,3})?$/;
+    var phno_regexp = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    var pwd_regexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
    
     if(fname.value=="")
     {
@@ -42,7 +42,7 @@ function validate()
       alert("All fields are required");
       return false;
     }
-    else if(regexp.test(email)==false)
+    else if(email_regexp.test(email)==false)
     {
       alert("Enter a valid email id");
       return false;
@@ -53,7 +53,7 @@ function validate()
       alert("All fields are required");
       return false;
     }
-    else if(phregexp.test(phno.value)==false)
+    else if(phno_regexp.test(phno.value)==false)
     {
       alert("Enter a valid phone number");
       return false;
@@ -70,7 +70,7 @@ function validate()
       alert("All fields are required");
       return false;
     }
-    else if(passregexp.test(pwdf.value)==false)
+    else if(pwd_regexp.test(pwdf.value)==false)
     {
       alert("Enter valid password");
       return false;
@@ -87,22 +87,22 @@ function validate()
       return false;
     }
     else{
-    alert("Signup success");
+    alert("Successfully registered");
     return true;
     }
 
     }
 
     // password validation
-    let pwdf= document.getElementById('password_first');
+    let pwdf = document.getElementById('password_first');
     pwdf.addEventListener('keyup',function(){
         checkPassword(pwdf.value)
       })
       function checkPassword(password)
       {
-          var prog=document.getElementById('prog');
-        var strengthBar= document.getElementById('strength');
-        var strength=0;
+        var prog = document.getElementById('prog');
+        var strengthBar = document.getElementById('strength');
+        var strength = 0;
         if(password.match(/[a-zA-Z0-9]+/))
         {
           strength += 1;
